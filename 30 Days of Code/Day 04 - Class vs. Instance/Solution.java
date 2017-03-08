@@ -8,12 +8,13 @@ import java.util.*;
 public class Person {
     private int age;    
   
-    public Person(int initialAge) {
+    public Person(int initialAge) {           
         age = initialAge;       
-        if (age < 0) {
-            System.out.println("Age is not valid, setting age to 0.");
-            age = 0;
-        }
+        if (initialAge<0) {
+			this.age = 0;
+			System.out.println("Age is not valid, setting age to 0.");
+		} else 
+			this.age = initialAge;	
     }
 
     public void amIOld() {
